@@ -1,8 +1,12 @@
 import React from 'react'
+import CountButton from './CountButton'
+
 
 const App = () =>{
     return(
-        <h1>app</h1>
+        <div>
+            <CountButton />
+        </div>
     )
 }
 

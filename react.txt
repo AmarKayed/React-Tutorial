@@ -16,3 +16,11 @@ JSX Interpolation == HTML Tags having their content dependant on
                     useState Hook) 
 
 Babel == Allows us to use React without using create-react-app
+
+
+
+Every Component in React should start with a Capital Letter and 
+use CamelCase notation after that.
+
+
+
