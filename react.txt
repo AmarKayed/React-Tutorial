@@ -1,0 +1,18 @@
+Adding React to our project:
+
+    npx create-react-app my-app
+    cd my-app
+    npm start
+
+
+
+
+
+
+JSX == Javascript with HTML Tags
+
+JSX Interpolation == HTML Tags having their content dependant on 
+                    javascript variables(pretty much like simulating 
+                    useState Hook) 
+
+Babel == Allows us to use React without using create-react-app
