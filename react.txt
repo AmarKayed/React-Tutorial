@@ -23,4 +23,40 @@ Every Component in React should start with a Capital Letter and
 use CamelCase notation after that.
 
 
+Styling in React can be done with:
+    - Javascript Style Object
+    - External CSS File
+
+
+In order to update the value of a searchBar, we use the onChange attribute.
+
+In order to render a list of items we can use:
+    const products = [
+        'tooth paste',
+        'tooth brush',
+        'mouth wash',
+        'dental floss',
+        'mouth guard'
+    ]
+
+    {products.map(value => {return <div>{value}</div>})}
+
+            // OR:
+
+    <ul>
+        {products.map(value => {
+            return <li key = {value}>{value}</li>
+        })}
+    </ul>
+
+
+**** We need to use the Key prop in order for React to be able to identify the <li>
+
+
+
+
+
+
+
+
 
