@@ -2,16 +2,16 @@ import React from "react";
 import './SearchBar.css'
 import { useState } from "react";
 
-const products = [
-    'tooth paste',
-    'tooth brush',
-    'mouth wash',
-    'dental floss',
-    'mouth guard'
-]
+// const products = [
+//     'tooth paste',
+//     'tooth brush',
+//     'mouth wash',
+//     'dental floss',
+//     'mouth guard'
+// ]
 
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     const [searchValue, setSearchValue] = useState('')
 
     const handleInputChange = (event) => {
@@ -23,13 +23,17 @@ const SearchBar = () => {
         setSearchValue('')
     }
 
+    const filteredProducts = props.products.filter((value) => {
+        return value.includes(searchValue)
+    })
+
     return (
         <div>
             <input type = "text" value = {searchValue} onChange = {handleInputChange}></input>
             {searchValue && <button onClick = {handleClearClick}>clear</button>}
             {/* {searchValue} */}
             <ul>
-                {products.map(value => {
+                {filteredProducts.map(value => {
                     return <li key = {value}>{value}</li>
                 })}
             </ul>

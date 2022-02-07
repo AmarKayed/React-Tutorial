@@ -3,6 +3,14 @@ import CountButton from './CountButton/CountButton'
 import SearchBar from './SearchBar/SearchBar'
 
 
+const products = [
+    'tooth paste',
+    'tooth brush',
+    'mouth wash',
+    'dental floss',
+    'mouth guard'
+]
+
 const App = () => {
     return(
         <div>
@@ -12,7 +20,7 @@ const App = () => {
             <CountButton incrementBy = {7} background = "red"/>
          */}
 
-        <SearchBar />
+        <SearchBar products = {products}/>
         </div>
     )
 }
