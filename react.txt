@@ -67,5 +67,23 @@ Filtering Items:
 
 
 
+useEffect is used to call a function whenever a specific component is rendered again.
 
+Whenever we use useEffect, we need to provide as a second argument
+an array of all the states which will trigger the function 
+when they are rendered again.
+
+Examples:
+    // This useEffect will call the function only once, when the app is rendered for the first time/when we refresh the page
+    useEffect(() => {
+        console.log('First Render')
+    }, [])
+
+
+    // This useEffect will call the function whenever the currentCount state is rerendered
+    useEffect(() => {
+        console.log(currentCount)
+        if(currentCount == 10)
+            alert("Count is 10!")
+    }, [currentCount])
 
